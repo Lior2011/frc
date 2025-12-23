@@ -11,8 +11,9 @@ import frc.robot.subsystems.Intake;
 public class rollerForwardCommand extends Command {
   private Intake intake;
     /** Creates a new rollerForwardCommand. */
-  public rollerForwardCommand() {
-    // Use addRequirements() here to declare subsystem dependencies.
+  public rollerForwardCommand(Intake intake) {
+    this.intake = intake;
+    addRequirements(intake);
   }
 
   // Called when the command is initially scheduled.

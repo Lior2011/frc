@@ -11,8 +11,9 @@ import frc.robot.subsystems.Intake;
 public class rollerBackwordsComand extends Command {
   public Intake intake;
   /** Creates a new rollerBackwordsComand. */
-  public rollerBackwordsComand() {
-    // Use addRequirements() here to declare subsystem dependencies.
+  public rollerBackwordsComand(Intake intake) {
+    this.intake = intake;
+    addRequirements(intake);
   }
 
   // Called when the command is initially scheduled.
